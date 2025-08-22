@@ -1,8 +1,10 @@
-#This is a modified version of Face Recognition. This modified version contains code from the authors that originally made this program. Licensing can be found in the main Face Recognition folder.
-#This version does not support picamera. It is designed to support USB cameras.
-#The speed of face_rec will depend on the hardware used. It runs very fast on the RPI5. 
+#This version does not support picamera. It is designed to support USB cameras / BG Тази версия на софтуера не поддържа
+#стандартната камера на марката. Преработен е така, че да работи със стандартна USB камера.
 
-#THIS IS A SCRIPT USED FOR CONTROLLING HARDWARE, CURRENTLY CONFIGURED TO CONTROL THE GPIO PINS USING AN IF STATEMENT ON LINE 74.
+#The speed of face_rec will depend on the hardware used. It runs well and tested only on RPI5 / BG Бързоработата на кода зависи
+#от мощността на хардуера. Работи добре и е тествано само на Raspberry Pi 5.
+
+#THIS IS A SCRIPT USED FOR CONTROLLING HARDWARE, CURRENTLY CONFIGURED TO CONTROL THE GPIO PINS USING AN IF STATEMENT
 
 import face_recognition
 import cv2
@@ -27,7 +29,6 @@ if not cap.isOpened():
     exit()
 
 # Initialize GPIO
-#output = LED(14)
 servo = AngularServo(14, min_angle=0, max_angle=180)
 
 # Initialize our variables
