@@ -7,7 +7,6 @@ import os
 from datetime import datetime
 import time
 
-# Change this to the name of the person you're photographing
 PERSON_NAME = "nikola" 
 
 def create_folder(name):
@@ -64,3 +63,4 @@ def capture_photos(name):
 
 if __name__ == "__main__":
     capture_photos(PERSON_NAME)
+
